@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
     <h:head>
         <title>Cadastro Congresso</title>
     </h:head>
@@ -15,7 +16,7 @@
                 <h:outputText value="Informações Pessoais"/>
             </h3>
             <h:outputText value="Nome:"/>
-            <h:inputText value="#{userBean.nome}" />
+            <h:inputText value="#{userBean.nome}" />           
             <br></br>
             <h:outputText value="CPF:"/>
             <h:inputText value="#{userBean.CPF}" />
@@ -53,7 +54,9 @@
             <h:outputText value="Email:"/>
             <h:inputText value="#{userBean.email}" />
             <br></br>
-            <h:commandButton action="cadastroCursos" value="OK" />
+            <h:commandButton action="cadastroCursos" value="OK" >
+                <f:param name="nome" value="#{userBean.nome}" />
+            </h:commandButton>
         </h:form>
     </h:body>
 </html>

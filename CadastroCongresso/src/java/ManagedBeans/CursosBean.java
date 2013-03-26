@@ -7,6 +7,8 @@ package ManagedBeans;
 import java.util.ArrayList;
 import java.util.List;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
+import javax.faces.bean.RequestScoped;
 import javax.faces.bean.SessionScoped;
 
 /**
@@ -18,7 +20,9 @@ import javax.faces.bean.SessionScoped;
 public class CursosBean {
     
     private List cursos = new ArrayList();
-
+    @ManagedProperty(value="#{userBean}")
+    private UserBean user;
+    
     /**
      * Creates a new instance of CursosBean
      */
@@ -37,5 +41,19 @@ public class CursosBean {
      */
     public void setCursos(List cursos) {
         this.cursos = cursos;
+    }
+
+    /**
+     * @return the user
+     */
+    public UserBean getUser() {
+        return user;
+    }
+
+    /**
+     * @param user the user to set
+     */
+    public void setUser(UserBean user) {
+        this.user = user;
     }
 }
