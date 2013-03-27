@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Cadastro Congresso</title>
+    </h:head>
+    <h:body>
+        
+        <h1>
+            <h:outputText value="Cadastro Congresso"/>
+        </h1>
+        <h:form id="UserEntryForm">
+            <h3>
+                <h:outputText value="Informações Pessoais"/>
+            </h3>
+            <h:outputText value="Nome:"/>
+            <h:inputText value="#{userBean.nome}" />           
+            <br></br>
+            <h:outputText value="CPF:"/>
+            <h:inputText value="#{userBean.CPF}" />
+            <br></br>
+            <h:outputText value="RG:"/>
+            <h:inputText value="#{userBean.RG}" />
+            <br></br>
+            <h3>
+                <h:outputText value="Endereço"/>
+            </h3>
+            <h:outputText value="Rua:"/>
+            <h:inputText value="#{userBean.rua}" />
+            <br></br>
+            <h:outputText value="Número:"/>
+            <h:inputText value="#{userBean.numero}" />
+            <br></br>
+            <h:outputText value="Cidade:"/>
+            <h:inputText value="#{userBean.cidade}" />
+            <br></br>
+            <h:outputText value="Estado:"/>
+            <h:inputText value="#{userBean.estado}" />
+            <br></br>
+            <h:outputText value="CEP:"/>
+            <h:inputText value="#{userBean.CEP}" />
+            <br></br>
+            <h3>
+                <h:outputText value="Contato"/>
+            </h3>
+            <h:outputText value="Telefone Fixo:"/>
+            <h:inputText value="#{userBean.telFixo}" />
+            <br></br>
+            <h:outputText value="Telefone Celular:"/>
+            <h:inputText value="#{userBean.telCelular}" />
+            <br></br>
+            <h:outputText value="Email:"/>
+            <h:inputText value="#{userBean.email}" />
+            <br></br>
+            <h:commandButton action="cadastroCursos" value="OK" >
+                <f:param name="nome" value="#{userBean.nome}" />
+            </h:commandButton>
+        </h:form>
+    </h:body>
+</html>
+
